@@ -42,27 +42,27 @@ const products: Product[] = [
     name: "Tilting Vegetable Washer",
     category: "Vegetable & Fruit Washers",
     images: [
-      "/product/tilting-washer-1.png",
-      "/product/tilting-washer-2.png",
-      "/product/tilting-washer-3.png",
-      "/product/tilting-washer-4.png",
+      "/product/tilting-washer-1.webp",
+      "/product/tilting-washer-2.webp",
+      "/product/tilting-washer-3.webp",
+      "/product/tilting-washer-4.webp",
     ],
   },
   {
     name: "Multi-Purpose Vegetable Washer",
     category: "Vegetable & Fruit Washers",
     images: [
-      "/temp/brands/multi-washer-1.png",
-      "/temp/brands/multi-washer-2.png",
-      "/temp/brands/multi-washer-3.png",
+      "/temp/brands/multi-washer-1.webp",
+      "/temp/brands/multi-washer-2.webp",
+      "/temp/brands/multi-washer-3.webp",
     ],
   },
   {
     name: "Crate Washing Machine",
     category: "Vegetable & Fruit Washers",
     images: [
-      "/temp/brands/crate-washer-1.png",
-      "/temp/brands/crate-washer-2.png",
+      "/temp/brands/crate-washer-1.webp",
+      "/temp/brands/crate-washer-2.webp",
     ],
   },
 
@@ -71,24 +71,24 @@ const products: Product[] = [
     name: "Garlic Peeling Machine",
     category: "Peeling & Shelling Machines",
     images: [
-      "/temp/brands/Garlic_Peeling_Machine_1.png",
-      "/temp/brands/Garlic_Peeling_Machine_2.png",
-      "/temp/brands/Garlic_Peeling_Machine_3.png",
+      "/temp/brands/Garlic_Peeling_Machine_1.webp",
+      "/temp/brands/Garlic_Peeling_Machine_2.webp",
+      "/temp/brands/Garlic_Peeling_Machine_3.webp",
     ],
   },
   {
     name: "Onion Peeling Machine",
     category: "Peeling & Shelling Machines",
     images: [
-      "/temp/brands/Onion_Peeling_Machine_1.png",
-      "/temp/brands/Onion_Peeling_Machine_2.png",
-      "/temp/brands/Onion_Peeling_Machine_3.png",
+      "/temp/brands/Onion_Peeling_Machine_1.webp",
+      "/temp/brands/Onion_Peeling_Machine_2.webp",
+      "/temp/brands/Onion_Peeling_Machine_3.webp",
     ],
   },
   {
     name: "Ginger and Potato Washing and Peeling Machine",
     category: "Peeling & Shelling Machines",
-    images: ["/temp/brands/Gingerandpotato_Peeling_Machine_1.png"],
+    images: ["/temp/brands/Gingerandpotato_Peeling_Machine_1.webp"],
   },
 
   // Chopping, Dicing & Pulping
@@ -96,35 +96,35 @@ const products: Product[] = [
     name: "Vegetable Dicing Machine",
     category: "Chopping, Dicing & Pulping",
     images: [
-      "/temp/brands/Vegetable_Dicing_Machine_1.png",
-      "/temp/brands/Vegetable_Dicing_Machine_2.png",
+      "/temp/brands/Vegetable_Dicing_Machine_1.webp",
+      "/temp/brands/Vegetable_Dicing_Machine_2.webp",
     ],
   },
   {
     name: "Chopping Machine",
     category: "Chopping, Dicing & Pulping",
     images: [
-      "/temp/brands/Chopping_Machine_1.png",
-      "/temp/brands/Chopping_Machine_2.png",
-      "/temp/brands/Chopping_Machine_3.png",
+      "/temp/brands/Chopping_Machine_1.webp",
+      "/temp/brands/Chopping_Machine_2.webp",
+      "/temp/brands/Chopping_Machine_3.webp",
     ],
   },
   {
     name: "Leafy Vegetable Cutting Machine",
     category: "Chopping, Dicing & Pulping",
     images: [
-      "/temp/brands/Leafy_Vegetable_Cutting_Machine_1.png",
-      "/temp/brands/Leafy_Vegetable_Cutting_Machine_2.png",
-      "/temp/brands/Leafy_Vegetable_Cutting_Machine_3.png",
+      "/temp/brands/Leafy_Vegetable_Cutting_Machine_1.webp",
+      "/temp/brands/Leafy_Vegetable_Cutting_Machine_2.webp",
+      "/temp/brands/Leafy_Vegetable_Cutting_Machine_3.webp",
     ],
   },
   {
     name: "Custard Apple Pulping Machine",
     category: "Chopping, Dicing & Pulping",
     images: [
-      "/temp/brands/Custard_Apple_Pulping_Machine_1.png",
-      "/temp/brands/Custard_Apple_Pulping_Machine_2.png",
-      "/temp/brands/Custard_Apple_Pulping_Machine_3.png",
+      "/temp/brands/Custard_Apple_Pulping_Machine_1.webp",
+      "/temp/brands/Custard_Apple_Pulping_Machine_2.webp",
+      "/temp/brands/Custard_Apple_Pulping_Machine_3.webp",
     ],
   },
 
@@ -133,47 +133,47 @@ const products: Product[] = [
     name: "Centrifugal Dryer",
     category: "Dryers & Conveyors",
     images: [
-      "/temp/brands/Centrifugal_Dryer_1.png",
-      "/temp/brands/Centrifugal_Dryer_2.png",
+      "/temp/brands/Centrifugal_Dryer_1.webp",
+      "/temp/brands/Centrifugal_Dryer_2.webp",
     ],
   },
   {
     name: "Tray Dryers",
     category: "Dryers & Conveyors",
     images: [
-      "/temp/brands/Tray_Dryers_1.png",
-      "/temp/brands/Tray_Dryers_2.png",
+      "/temp/brands/Tray_Dryers_1.webp",
+      "/temp/brands/Tray_Dryers_2.webp",
     ],
   },
   {
     name: "Pouch Dryers",
     category: "Dryers & Conveyors",
     images: [
-      "/temp/brands/Pouch_Dryers_1.png",
-      "/temp/brands/Pouch_Dryers_2.png",
-      "/temp/brands/Pouch_Dryers_3.png",
+      "/temp/brands/Pouch_Dryers_1.webp",
+      "/temp/brands/Pouch_Dryers_2.webp",
+      "/temp/brands/Pouch_Dryers_3.webp",
     ],
   },
   {
     name: "Different Types of Conveyors",
     category: "Dryers & Conveyors",
-    images: ["/temp/brands/converyors_1.png", "/temp/brands/converyors_2.png"],
+    images: ["/temp/brands/converyors_1.webp", "/temp/brands/converyors_2.webp"],
   },
 ];
 
 const trustedBrands: Brand[] = [
-  { name: "Maiyas", logo: "/brand/homepage/Frame 123.png" },
-  { name: "ITC Limited", logo: "/brand/homepage/Frame 122.png" },
-  { name: "Chitale", logo: "/brand/homepage/Frame 124.png" },
-  { name: "Gits", logo: "/brand/homepage/Frame 125.png" },
-  { name: "Mother Dairy", logo: "/brand/homepage/Frame 126.png" },
-  { name: "Taj Sats", logo: "/brand/homepage/Frame 127.png" },
-  { name: "Suhana", logo: "/brand/homepage/Frame 128.png" },
-  { name: "Kagome", logo: "/brand/homepage/Frame 129.png" },
-  { name: "Tasty Bite", logo: "/brand/homepage/Frame 130.png" },
-  { name: "Mothers Recipe", logo: "/brand/homepage/Frame 131.png" },
-  { name: "MTR", logo: "/brand/homepage/Frame 132.png" },
-  { name: "Essar", logo: "/brand/homepage/Frame 133.png" },
+  { name: "Maiyas", logo: "/brand/homepage/Frame 123.webp" },
+  { name: "ITC Limited", logo: "/brand/homepage/Frame 122.webp" },
+  { name: "Chitale", logo: "/brand/homepage/Frame 124.webp" },
+  { name: "Gits", logo: "/brand/homepage/Frame 125.webp" },
+  { name: "Mother Dairy", logo: "/brand/homepage/Frame 126.webp" },
+  { name: "Taj Sats", logo: "/brand/homepage/Frame 127.webp" },
+  { name: "Suhana", logo: "/brand/homepage/Frame 128.webp" },
+  { name: "Kagome", logo: "/brand/homepage/Frame 129.webp" },
+  { name: "Tasty Bite", logo: "/brand/homepage/Frame 130.webp" },
+  { name: "Mothers Recipe", logo: "/brand/homepage/Frame 131.webp" },
+  { name: "MTR", logo: "/brand/homepage/Frame 132.webp" },
+  { name: "Essar", logo: "/brand/homepage/Frame 133.webp" },
 ];
 
 const industries: Industry[] = [
@@ -181,86 +181,86 @@ const industries: Industry[] = [
     name: "Dairy",
     description:
       "Efficient milk processing, cheese production, and other dairy products.",
-    image: "/Equipment/1942 3.png",
+    image: "/Equipment/1942 3.webp",
   },
   {
     name: "Bakery",
     description:
       "Automated dough mixing, shaping, and baking solutions for large-scale bakeries.",
-    image: "/Equipment/1942 2.png",
+    image: "/Equipment/1942 2.webp",
   },
   {
     name: "Restaurant",
     description:
       "High-speed vegetable prep, washing, and cutting machines for busy restaurant kitchens.",
-    image: "/Equipment/1942 4.png",
+    image: "/Equipment/1942 4.webp",
   },
   {
     name: "Community Kitchen",
     description:
       "Bulk food processing equipment for mid-day meal programs and large-scale catering.",
-    image: "/Equipment/1942 5.png",
+    image: "/Equipment/1942 5.webp",
   },
   {
     name: "Frozen Food Processing",
     description:
       "Pre-processing, blanching, and IQF-ready preparation for frozen food export units.",
-    image: "/Equipment/1942 1.png",
+    image: "/Equipment/1942 1.webp",
   },
   {
     name: "Food Packaging",
     description:
       "Hygienic washing, drying, and conveying systems integrated with packaging lines.",
-    image: "/Equipment/1942 6.png",
+    image: "/Equipment/1942 6.webp",
   },
 ];
 
 const comparisonRows: ComparisonRow[] = [
   {
-    ordinaryIcon: "/icon/red-1.png",
+    ordinaryIcon: "/icon/red-1.webp",
     ordinaryTitle: "150 kg/hour",
     ordinaryDesc: "Limited throughput with the same team size",
-    nexgenIcon: "/icon/green-1.png",
+    nexgenIcon: "/icon/green-1.webp",
     nexgenTitle: "500–1000 kg/hour",
     nexgenDesc: "Same team, dramatically higher output",
   },
   {
-    ordinaryIcon: "/icon/red-2.png",
+    ordinaryIcon: "/icon/red-2.webp",
     ordinaryTitle: "15 Workers",
     ordinaryDesc: "High headcount, high labor overhead",
-    nexgenIcon: "/icon/green-2.png",
+    nexgenIcon: "/icon/green-2.webp",
     nexgenTitle: "3–4 Operators",
     nexgenDesc: "Lean team managing automated systems",
   },
   {
-    ordinaryIcon: "/icon/red-3.png",
+    ordinaryIcon: "/icon/red-3.webp",
     ordinaryTitle: "Inconsistent Output",
     ordinaryDesc: "Variable size and quality shift to shift",
-    nexgenIcon: "/icon/green-3.png",
+    nexgenIcon: "/icon/green-3.webp",
     nexgenTitle: "Uniform Quality",
     nexgenDesc: "Every shift, every day no exceptions",
   },
   {
-    ordinaryIcon: "/icon/red-2.png",
+    ordinaryIcon: "/icon/red-2.webp",
     ordinaryTitle: "Rejecting Orders",
     ordinaryDesc: "Capacity limits cost you contracts",
-    nexgenIcon: "/icon/green-4.png",
+    nexgenIcon: "/icon/green-4.webp",
     nexgenTitle: "Scale on Demand",
     nexgenDesc: "Meet any order, grow revenue confidently",
   },
   {
-    ordinaryIcon: "/icon/red-4.png",
+    ordinaryIcon: "/icon/red-4.webp",
     ordinaryTitle: "Rising Labor Costs",
     ordinaryDesc: "Margins eroded by unpredictable wages",
-    nexgenIcon: "/icon/green-5.png",
+    nexgenIcon: "/icon/green-5.webp",
     nexgenTitle: "Locked Processing Costs",
     nexgenDesc: "Predictable margins, protected profits",
   },
   {
-    ordinaryIcon: "/icon/red-5.png",
+    ordinaryIcon: "/icon/red-5.webp",
     ordinaryTitle: "Utility Waste",
     ordinaryDesc: "Excess energy and water consumption",
-    nexgenIcon: "/icon/green-6.png",
+    nexgenIcon: "/icon/green-6.webp",
     nexgenTitle: "30–40% Less Consumption",
     nexgenDesc: "Significant energy & water savings",
   },
@@ -311,31 +311,31 @@ const whyDifferentFaqs: FaqItem[] = [
 
 const featuresData: Feature[] = [
   {
-    icon: "/icon/automated.png",
+    icon: "/icon/automated.webp",
     title: "Automated & Precise Processing",
     description:
       "Programmed cutting, washing, and peeling parameters deliver uniform size, texture, and yield.",
   },
   {
-    icon: "/icon/energy.png",
+    icon: "/icon/energy.webp",
     title: "Energy-Efficient Operation",
     description:
       "Optimized motors, VFDs, and air-knife systems reduce power and water usage without slowing production.",
   },
   {
-    icon: "/icon/custom.png",
+    icon: "/icon/custom.webp",
     title: "Custom Configuration",
     description:
       "Machines and lines adapt to vegetables, fruits, dough, chapati, and ready-to-eat products.",
   },
   {
-    icon: "/icon/continous.png",
+    icon: "/icon/continous.webp",
     title: "Built for Continuous Use",
     description:
       "Heavy-duty stainless-steel 304 construction supports multi-shift, high-volume operations.",
   },
   {
-    icon: "/icon/maintenance.png",
+    icon: "/icon/maintenance.webp",
     title: "Easy Maintenance",
     description:
       "Quick-access panels and simple cleaning routines reduce downtime.",
@@ -344,19 +344,19 @@ const featuresData: Feature[] = [
 
 const whyChooseCards: WhyChooseCard[] = [
   {
-    icon: "/icon/icon-expertise.png",
+    icon: "/icon/icon-expertise.webp",
     title: "20+ Years of Food Processing Expertise",
   },
   {
-    icon: "/icon/icon-support.png",
+    icon: "/icon/icon-support.webp",
     title: "End-to-End Support (Not Just a Vendor)",
   },
   {
-    icon: "/icon/icon-track-record-1.png",
+    icon: "/icon/icon-track-record-1.webp",
     title: "Proven Track Record with Leading Brands",
   },
   {
-    icon: "/icon/icon-innovation.png",
+    icon: "/icon/icon-innovation.webp",
     title: "Innovations & Engineering That Focuses on Efficiency",
   },
 ];
@@ -368,7 +368,7 @@ const testimonialsData: Testimonial[] = [
       "We were struggling to meet demand with our manual dicing process. After installing NexGen's automated dicing line, we increased throughput by 65% while maintaining perfect cube consistency. The machine paid for itself in just 7 months through increased orders and reduced labor costs.",
     personName: "Operations Head",
     personRole: "Mid-Sized Food Packaging Company, Pune",
-    personImage: "/icon/operation-head.png",
+    personImage: "/icon/operation-head.webp",
   },
   {
     category: "Ready-to-Eat / Central Kitchen",
@@ -376,7 +376,7 @@ const testimonialsData: Testimonial[] = [
       "Quality consistency across our 12 outlets was our biggest challenge. NexGen's washing and cutting automation changed everything. Now every outlet gets the same perfect prep, our customers notice the improved quality, and our kitchen staff can focus on cooking instead of repetitive cutting.",
     personName: "Production Manager",
     personRole: "Multi-Location Ready-to-Eat Chain, Delhi NCR",
-    personImage: "/icon/production-manager.png",
+    personImage: "/icon/production-manager.webp",
   },
   {
     category: "Export-Focused Processor",
@@ -384,7 +384,7 @@ const testimonialsData: Testimonial[] = [
       "Meeting international food safety standards was non-negotiable for our export business. NexGen didn't just provide machines—they helped us design a complete hygienic processing line that passed the BRCGS audit on the first attempt. Their attention to compliance details gave us confidence to expand into EU markets.",
     personName: "Director",
     personRole: "Export-Oriented Food Processing Facility, Gujarat",
-    personImage: "/icon/director.png",
+    personImage: "/icon/director.webp",
   },
 ];
 
@@ -401,7 +401,7 @@ const caseStudiesData: CaseStudy[] = [
       "Reduced dependency on manual labor",
       "Better control over daily production schedules",
     ],
-    image: "/dairy.png",
+    image: "/dairy.webp",
   },
   {
     title: "Multi-Location Food Processor",
@@ -415,7 +415,7 @@ const caseStudiesData: CaseStudy[] = [
       "Standardized quality across locations",
       "ROI achieved in approximately 14 months",
     ],
-    image: "/bakery.png",
+    image: "/bakery.webp",
   },
   {
     title: "Ready-to-Eat Meal Manufacturer",
@@ -429,7 +429,7 @@ const caseStudiesData: CaseStudy[] = [
       "85% drop in customer complaints",
       "Enabled entry into higher-margin retail distribution",
     ],
-    image: "/Restaurant.png",
+    image: "/Restaurant.webp",
   },
   {
     title: "High-Volume Food Packaging Facility",
@@ -443,7 +443,7 @@ const caseStudiesData: CaseStudy[] = [
       "Ability to fulfill previously rejected orders",
       "Improved daily production planning",
     ],
-    image: "/kitchen.png",
+    image: "/kitchen.webp",
   },
   {
     title: "Agricultural & Farmer Cooperatives",
@@ -457,7 +457,7 @@ const caseStudiesData: CaseStudy[] = [
       "Access to premium and modern trade buyers",
       "Improved utilization during peak seasons",
     ],
-    image: "/dairy.png",
+    image: "/dairy.webp",
   },
 ];
 
@@ -469,7 +469,8 @@ export default function Home() {
         description="Automated Food Processing Machines trusted by Akshayapatra, leading ready-to-eat brands (McDonald's, Amul Dairy, Mother's Recipe, Suhana, and Gits), airline caterings (Taj Stats), and export facilities to cut processing time, reduce labor costs, and scale production."
         ctaText="Get Your Free ROI Assessment"
         ctaHref="/contact"
-        backgroundImage="/temp/hero.png"
+        backgroundVideo="/video/hero-compressed.mp4"
+        backgroundImage="/temp/hero.webp"
       />
       <TrustedBy
         title={`Trusted By 500+ Food Processors\nAcross India And Global Market`}
@@ -491,7 +492,7 @@ export default function Home() {
         title="Equipment That Cut Food Wastage & Improve Output Quality"
         description="From Messy Manual Work to Clean & Reliable Automated Machines."
         videoId="aZi-9hn20iQ"
-        thumbnail="/util/yt_thumbnail_home.png"
+        thumbnail="/util/yt_thumbnail_home.webp"
       />
       <PainPoints
         title="Stuck at Capacity While Demand Keeps Growing?"
@@ -504,7 +505,7 @@ export default function Home() {
           "Excessive water and power consumption inflates cost per kg",
           "Hygiene gaps create audit pressure and compliance risks",
         ]}
-        image="/util/food-processing.png"
+        image="/util/food-processing.webp"
       />
       <ComparisonTable
         title="Here's What Changes When You Get Automated Machines"
@@ -512,7 +513,7 @@ export default function Home() {
       />
       <WhyDifferent
         title="What Makes NexGen Food Processing Equipment Different?"
-        image="/util/faq-home.png"
+        image="/util/faq-home.webp"
         faqs={whyDifferentFaqs}
       />
       <Features

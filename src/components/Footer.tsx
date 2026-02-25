@@ -128,14 +128,14 @@ export default function Footer() {
             {/* Certifications */}
             <div className="flex items-center gap-3">
               <Image
-                src="/icon/iaf.png"
+                src="/icon/iaf.webp"
                 alt="IAF Certification"
                 width={100}
                 height={100}
                 className="object-contain"
               />
               <Image
-                src="/icon/iso.png"
+                src="/icon/iso.webp"
                 alt="ISO 9001:2015"
                 width={100}
                 height={100}

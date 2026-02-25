@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Link as ScrollLink } from "react-scroll";
 
 interface HeroProps {
@@ -8,6 +7,7 @@ interface HeroProps {
   description: string;
   ctaText: string;
   ctaHref: string;
+  backgroundVideo: string;
   backgroundImage: string;
 }
 
@@ -15,18 +15,22 @@ export default function Hero({
   title,
   description,
   ctaText,
+  backgroundVideo,
   backgroundImage,
 }: HeroProps) {
   return (
-    <section className="relative w-full h-screen flex items-center">
-      {/* Background Image (will be replaced with video later) */}
-      <Image
-        src={backgroundImage}
-        alt=""
-        fill
-        priority
-        className="object-cover"
-      />
+    <section className="relative w-full h-screen flex items-center overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={backgroundImage}
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" />

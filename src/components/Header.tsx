@@ -22,7 +22,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
-            src="/Nexgen.png"
+            src="/Nexgen.webp"
             alt="Nexgen Hygiene Systems"
             width={160}
             height={40}
