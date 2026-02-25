@@ -181,37 +181,37 @@ const industries: Industry[] = [
     name: "Dairy",
     description:
       "Efficient milk processing, cheese production, and other dairy products.",
-    image: "/dairy.png",
+    image: "/Equipment/1942 3.png",
   },
   {
     name: "Bakery",
     description:
       "Automated dough mixing, shaping, and baking solutions for large-scale bakeries.",
-    image: "/bakery.png",
+    image: "/Equipment/1942 2.png",
   },
   {
     name: "Restaurant",
     description:
       "High-speed vegetable prep, washing, and cutting machines for busy restaurant kitchens.",
-    image: "/Restaurant.png",
+    image: "/Equipment/1942 4.png",
   },
   {
     name: "Community Kitchen",
     description:
       "Bulk food processing equipment for mid-day meal programs and large-scale catering.",
-    image: "/kitchen.png",
+    image: "/Equipment/1942 5.png",
   },
   {
     name: "Frozen Food Processing",
     description:
       "Pre-processing, blanching, and IQF-ready preparation for frozen food export units.",
-    image: "/dairy.png",
+    image: "/Equipment/1942 1.png",
   },
   {
     name: "Food Packaging",
     description:
       "Hygienic washing, drying, and conveying systems integrated with packaging lines.",
-    image: "/bakery.png",
+    image: "/Equipment/1942 6.png",
   },
 ];
 
@@ -241,7 +241,7 @@ const comparisonRows: ComparisonRow[] = [
     nexgenDesc: "Every shift, every day no exceptions",
   },
   {
-    ordinaryIcon: "/icon/red-4.png",
+    ordinaryIcon: "/icon/red-2.png",
     ordinaryTitle: "Rejecting Orders",
     ordinaryDesc: "Capacity limits cost you contracts",
     nexgenIcon: "/icon/green-4.png",
@@ -249,7 +249,7 @@ const comparisonRows: ComparisonRow[] = [
     nexgenDesc: "Meet any order, grow revenue confidently",
   },
   {
-    ordinaryIcon: "/icon/red-5.png",
+    ordinaryIcon: "/icon/red-4.png",
     ordinaryTitle: "Rising Labor Costs",
     ordinaryDesc: "Margins eroded by unpredictable wages",
     nexgenIcon: "/icon/green-5.png",
@@ -280,25 +280,31 @@ const whyDifferentFaqs: FaqItem[] = [
   {
     question: "Proven Results with India's Leading Food Operators",
     points: [
-      "Trusted by Akshayapatra, McDonald's, Amul Dairy, Suhana, and Gits",
-      "Deployed in 500+ food processing facilities across India",
-      "Consistent performance in large-scale catering and export units",
+      "Akshayapatra Foundation (India's largest NGO kitchen) - 30% faster processing",
+      "Multi-location Food Franchises - 3x output with product accuracy",
+      "Ready-to-Eat Meals Kitchen Chains - 40% wash consistency improvement",
+      "Leading Food Packaging Companies - 60% productivity growth",
+      "Farmers & Co-operative Societies - 27% higher profits by reducing post-harvest losses",
     ],
   },
   {
     question: "Complete Range for Your Entire Processing Line",
     points: [
-      "Washing, peeling, cutting, dicing, drying, and conveying — all from one manufacturer",
-      "Seamless integration between machines for end-to-end automation",
-      "Custom configurations available for unique production needs",
+      "Washing equipment (bubble, tilting, multi-purpose)",
+      "Peeling machines (onion, garlic, potato, ginger)",
+      "Cutting & dicing (high-speed, multi-vegetable)",
+      "Drying systems (air knife, centrifugal, tray dryers)",
+      "Specialty equipment (chapati lines, pulpers, conveyors)",
     ],
   },
   {
     question: "Industrial-Grade Construction for 24/7 Operation",
     points: [
-      "Heavy-duty stainless steel build for continuous use",
-      "Low maintenance design with easy-access components",
-      "Built to meet FSSAI and international hygiene standards",
+      "Heavy-duty stainless steel 304/316 (won't rust or corrode)",
+      "Food-grade components throughout",
+      "Built for continuous operation (not light commercial use)",
+      "Handles high volumes without breakdown",
+      "10+ year operational lifespan",
     ],
   },
 ];

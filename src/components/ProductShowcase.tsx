@@ -80,12 +80,12 @@ export default function ProductShowcase({
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mt-8 mb-10">
+        <div className="flex overflow-x-auto no-scrollbar md:flex-wrap md:justify-center gap-3 mt-8 mb-10">
           {categories.map((cat) => (
             <button
               key={cat.label}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-full text-body-sm font-semibold transition-colors cursor-pointer ${
+              className={`px-5 py-2.5 rounded-full text-body-sm font-semibold transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                 activeCategory.label === cat.label
                   ? "bg-[#F10651] text-white border border-[#F10651]"
                   : "bg-white text-[#4D4D4D] border border-gray-300 hover:bg-gray-100"

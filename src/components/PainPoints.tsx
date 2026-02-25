@@ -46,8 +46,15 @@ export default function PainPoints({
 
         {/* Content grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          {/* Left - Pain points */}
-          <div>
+          {/* Image — shows first on mobile, right on desktop */}
+          <div className="relative order-1 md:order-2">
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+              <Image src={image} alt={title} fill className="object-cover" />
+            </div>
+          </div>
+
+          {/* Pain points — shows second on mobile, left on desktop */}
+          <div className="order-2 md:order-1">
             <h3 className="font-title font-semibold text-[18px] leading-[150%] text-[#2B74B8] mb-6">
               {listHeading}
             </h3>
@@ -59,13 +66,6 @@ export default function PainPoints({
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Right - Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-              <Image src={image} alt={title} fill className="object-cover" />
-            </div>
           </div>
         </div>
       </div>
