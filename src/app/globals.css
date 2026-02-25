@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-dm-sans);
+  --font-title: var(--font-instrument-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white text-[#171717] font-sans antialiased;
+}
+
+/* ===== Layout Utilities ===== */
+.pad {
+  @apply px-[5%];
+}
+
+.max {
+  @apply max-w-[1300px] mx-auto;
+}
+
+/* ===== Responsive Font Size Classes ===== */
+
+/* Hero title: 24px → 32px → 40px */
+.text-hero {
+  @apply text-[24px] leading-[1.2] md:text-[32px] lg:text-[40px];
+}
+
+/* Section heading: 22px → 26px → 32px · Instrument Sans 700 · 130% line-height */
+.text-heading {
+  @apply font-title font-bold text-[22px] leading-[130%] md:text-[26px] lg:text-[32px];
+}
+
+/* Sub heading: 18px → 20px → 24px */
+.text-subheading {
+  @apply text-[18px] leading-[1.4] md:text-[20px] lg:text-[24px];
+}
+
+/* Body large: 15px → 16px → 18px */
+.text-body-lg {
+  @apply text-[15px] leading-[1.6] md:text-[16px] lg:text-[18px];
+}
+
+/* Body: 14px → 15px → 16px · DM Sans 400 · 150% line-height */
+.text-body {
+  @apply font-sans font-normal text-[14px] leading-[150%] md:text-[15px] lg:text-[16px];
+}
+
+/* Body small: 12px → 13px → 14px */
+.text-body-sm {
+  @apply text-[12px] leading-[1.5] md:text-[13px] lg:text-[14px];
+}
+
+/* Nav link: 14px all breakpoints */
+.text-nav {
+  @apply text-[14px] leading-none tracking-wide;
 }
