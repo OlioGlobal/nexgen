@@ -13,6 +13,12 @@ interface FormData {
   city: string;
 }
 
+export interface ContactFormProps {
+  title?: string;
+  description?: string;
+  steps?: string[];
+}
+
 function CheckCircle() {
   return (
     <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 shrink-0">
@@ -28,7 +34,7 @@ function CheckCircle() {
   );
 }
 
-const steps = [
+const defaultSteps = [
   "Fill out the form below (takes 60 seconds)",
   "Our solutions expert contacts you within 24 hours",
   "We analyze your requirements and provide a customized proposal",
@@ -46,7 +52,11 @@ const roles = [
   "Other",
 ];
 
-export default function ContactForm() {
+export default function ContactForm({
+  title = "Join 500+ Smart Food Processors Who\u2019ve Already Made The Switch",
+  description = "Get your personalized ROI assessment and see exactly how much you could save.",
+  steps = defaultSteps,
+}: ContactFormProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const {
@@ -77,12 +87,10 @@ export default function ContactForm() {
           {/* Left — Content */}
           <div>
             <h2 className="font-title font-bold text-[28px] md:text-[32px] leading-[120%] text-white mb-4">
-              Join 500+ Smart Food Processors Who&apos;ve Already Made The
-              Switch
+              {title}
             </h2>
             <p className="font-sans font-normal text-[16px] leading-[150%] text-white/80 mb-8">
-              Get your personalized ROI assessment and see exactly how much you
-              could save.
+              {description}
             </p>
 
             <ul className="space-y-4">

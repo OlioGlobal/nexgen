@@ -73,8 +73,10 @@ export default function ProductShowcase({
       <div className="pad max">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="text-heading text-[#364761]">{title}</h2>
-          <p className="text-body text-[#4D4D4D] mt-4 max-w-[520px] mx-auto">
+          <h2 className="text-heading max-w-xl mx-auto text-[#364761]">
+            {title}
+          </h2>
+          <p className="text-body max-w-xl mx-auto text-[#4D4D4D] mt-4 max-w-[520px] mx-auto">
             {description}
           </p>
         </div>

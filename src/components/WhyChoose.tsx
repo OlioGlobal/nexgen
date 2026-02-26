@@ -22,11 +22,11 @@ export default function WhyChoose({ title, cards }: WhyChooseProps) {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="flex flex-wrap justify-center gap-5">
           {cards.map((card) => (
             <div
               key={card.title}
-              className="group rounded-2xl p-6 cursor-pointer transition-all duration-300 flex flex-col justify-between min-h-[200px] bg-white border border-[#D5D5D5] text-[#364761] hover:bg-[#DD064B] hover:text-white hover:border-[#DD064B]"
+              className="group rounded-2xl p-6 cursor-pointer transition-all duration-300 flex flex-col justify-between min-h-[200px] w-full sm:w-[calc(50%-10px)] lg:w-[calc(20%-16px)] bg-white border border-[#D5D5D5] text-[#364761] hover:bg-[#DD064B] hover:text-white hover:border-[#DD064B]"
             >
               <Image
                 src={card.icon}
