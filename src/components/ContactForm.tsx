@@ -3,6 +3,13 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import { APPS_SCRIPT_URL } from "@/config/forms";
+
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[];
+  }
+}
 
 interface FormData {
   fullName: string;
@@ -71,10 +78,45 @@ export default function ContactForm({
 
   const onSubmit = async (data: FormData) => {
     setLoading(true);
-    console.log("Step 1 submitted:", data);
-    localStorage.setItem("contactStep1", JSON.stringify(data));
-    // Simulate a short delay for UX
-    await new Promise((r) => setTimeout(r, 800));
+    const leadId = crypto.randomUUID();
+    const pageUrl = window.location.href;
+    const payload = { step: 1, leadId, formSlug, pageUrl, ...data };
+
+    // Save to localStorage for step 2
+    localStorage.setItem(
+      "contactStep1",
+      JSON.stringify({ ...data, leadId, formSlug })
+    );
+
+    // Send to Google Sheets
+    if (APPS_SCRIPT_URL) {
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(payload),
+        });
+      } catch (err) {
+        console.error("Sheet sync failed:", err);
+      }
+    }
+
+    // Analytics tracking
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "NexGen_Lead_Submitted",
+      formSlug,
+      leadId,
+      fullName: data.fullName,
+      companyName: data.companyName,
+      role: data.role,
+      email: data.email,
+      phone: data.phone,
+      city: data.city,
+      pageUrl,
+    });
+
     router.push(`/assessment/${formSlug}`);
   };
 

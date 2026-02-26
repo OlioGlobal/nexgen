@@ -20,19 +20,19 @@ import ProductShowcase, {
 const productCategories: CategoryConfig[] = [
   {
     label: "Vegetable & Fruit Washers",
-    brochureHref: "/brochures/vegetable-fruit-washers.pdf",
+    brochureHref: "/assets/brochures/nexgen-food-processing-brochure.pdf",
   },
   {
     label: "Peeling & Shelling Machines",
-    brochureHref: "/brochures/peeling-shelling-machines.pdf",
+    brochureHref: "/assets/brochures/nexgen-food-processing-brochure.pdf",
   },
   {
     label: "Chopping, Dicing & Pulping",
-    brochureHref: "/brochures/chopping-dicing-pulping.pdf",
+    brochureHref: "/assets/brochures/nexgen-food-processing-brochure.pdf",
   },
   {
     label: "Dryers & Conveyors",
-    brochureHref: "/brochures/dryers-conveyors.pdf",
+    brochureHref: "/assets/brochures/nexgen-food-processing-brochure.pdf",
   },
 ];
 
@@ -401,7 +401,7 @@ const caseStudiesData: CaseStudy[] = [
       "Reduced dependency on manual labor",
       "Better control over daily production schedules",
     ],
-    image: "/dairy.webp",
+    image: "/casestudy/homepage/image 105.png",
   },
   {
     title: "Multi-Location Food Processor",
@@ -415,7 +415,7 @@ const caseStudiesData: CaseStudy[] = [
       "Standardized quality across locations",
       "ROI achieved in approximately 14 months",
     ],
-    image: "/bakery.webp",
+    image: "/casestudy/homepage/image 106.png",
   },
   {
     title: "Ready-to-Eat Meal Manufacturer",
@@ -429,7 +429,7 @@ const caseStudiesData: CaseStudy[] = [
       "85% drop in customer complaints",
       "Enabled entry into higher-margin retail distribution",
     ],
-    image: "/Restaurant.webp",
+    image: "/casestudy/homepage/image 108.png",
   },
   {
     title: "High-Volume Food Packaging Facility",
@@ -443,7 +443,7 @@ const caseStudiesData: CaseStudy[] = [
       "Ability to fulfill previously rejected orders",
       "Improved daily production planning",
     ],
-    image: "/kitchen.webp",
+    image: "/casestudy/homepage/image 109.png",
   },
   {
     title: "Agricultural & Farmer Cooperatives",
@@ -457,7 +457,7 @@ const caseStudiesData: CaseStudy[] = [
       "Access to premium and modern trade buyers",
       "Improved utilization during peak seasons",
     ],
-    image: "/dairy.webp",
+    image: "/casestudy/homepage/image 110.png",
   },
 ];
 

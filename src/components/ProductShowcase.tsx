@@ -109,6 +109,8 @@ export default function ProductShowcase({
         <div className="mt-12 text-center">
           <Link
             href={activeCategory.brochureHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0E4D85] text-white text-body-sm font-semibold rounded-lg border border-[#0E4D85] hover:bg-transparent hover:text-[#0E4D85] transition-colors"
           >
             {ctaText}

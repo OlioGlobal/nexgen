@@ -18,36 +18,6 @@ const airKnife: FormConfig = {
       title: "Your Drying Requirements",
       fields: [
         {
-          name: "dryingProducts",
-          label: "What products do you need to dry?",
-          type: "checkbox",
-          options: [
-            "Pouches / Packets",
-            "Bottles / Jars / Cans",
-            "Crates / Bins / Containers",
-            "Fresh Fruits & Vegetables",
-            "Meat / Poultry / Seafood",
-            "Dairy Products",
-            "Bakery Items",
-            "Industrial Parts / Components",
-          ],
-          hasOther: true,
-        },
-        {
-          name: "currentMethod",
-          label: "Current drying method:",
-          type: "radio",
-          options: [
-            "Manual towel / cloth drying",
-            "Air blowers (uncontrolled)",
-            "Heat-based drying (oven / tunnel)",
-            "Basic fan drying",
-            "No drying system in place",
-            "Existing air knife system (looking to upgrade)",
-          ],
-          hasOther: true,
-        },
-        {
           name: "industry",
           label: "Your industry:",
           type: "radio",
@@ -63,22 +33,20 @@ const airKnife: FormConfig = {
           ],
           hasOther: true,
         },
-      ],
-    },
-    {
-      title: "Production Details",
-      fields: [
         {
-          name: "productionSpeed",
-          label: "Production line speed / volume:",
-          type: "radio",
+          name: "dryingProducts",
+          label: "What products do you need to dry?",
+          type: "checkbox",
           options: [
-            "Less than 50 units/min",
-            "50–150 units/min",
-            "150–300 units/min",
-            "300–600 units/min",
-            "More than 600 units/min",
+            "Pouches / Packets",
+            "Bottles / Jars / Cans",
+            "Crates / Bins / Containers",
+            "Fresh Fruits & Vegetables",
+            "Meat / Poultry / Seafood",
+            "Dairy Products",
+            "Industrial Parts / Components",
           ],
+          hasOther: true,
         },
         {
           name: "challenge",
@@ -97,7 +65,7 @@ const airKnife: FormConfig = {
       ],
     },
     {
-      title: "Timeline & Next Steps",
+      title: "Timeline & Production",
       fields: [
         {
           name: "timeline",
@@ -111,15 +79,15 @@ const airKnife: FormConfig = {
           ],
         },
         {
-          name: "nextStep",
-          label: "What would be the ideal next step for you?",
+          name: "productionSpeed",
+          label: "Production line speed / volume:",
           type: "radio",
           options: [
-            "Get a detailed quotation",
-            "Schedule a factory visit / demo",
-            "Talk to a drying solutions expert",
-            "Receive technical specifications",
-            "Get energy savings projections",
+            "Less than 50 units/min",
+            "50–150 units/min",
+            "150–300 units/min",
+            "300–600 units/min",
+            "More than 600 units/min",
           ],
         },
       ],

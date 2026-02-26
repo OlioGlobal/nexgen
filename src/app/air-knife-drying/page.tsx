@@ -41,15 +41,15 @@ const trustedBrands = [
 const productCategories = [
   {
     label: "System Components",
-    brochureHref: "#contact",
+    brochureHref: "/assets/brochures/nexgen-air-knife-drying-brochure.pdf",
   },
   {
     label: "Pouch & Packaging Dryers",
-    brochureHref: "#contact",
+    brochureHref: "/assets/brochures/nexgen-air-knife-drying-brochure.pdf",
   },
   {
     label: "Dryers for Crate Washers",
-    brochureHref: "#contact",
+    brochureHref: "/assets/brochures/nexgen-air-knife-drying-brochure.pdf",
   },
 ];
 
@@ -95,52 +95,52 @@ const products = [
 
 const industries = [
   {
-    name: "Food & Beverage",
+    name: "Bottling and Canning",
     description:
       "High-speed drying for bottles, cans, and containers before labeling, coding, and packaging.",
-    image: "/Equipment/1942%201.webp",
+    image: "/industry/airkinfe/1942 7.png",
+  },
+  {
+    name: "Food Processing",
+    description:
+      "Moisture-free surfaces on fruits, vegetables, and packaged foods to extend shelf life and ensure quality.",
+    image: "/industry/airkinfe/1942 8.png",
+  },
+  {
+    name: "Tyre Industry",
+    description:
+      "Precision moisture removal from tyre surfaces before labeling, coating, and quality inspection.",
+    image: "/industry/airkinfe/1942 9.png",
+  },
+  {
+    name: "Sheet Metal Drying",
+    description:
+      "Streak-free drying for sheet metal after washing or coating to prevent corrosion and ensure finish quality.",
+    image: "/industry/airkinfe/1942 10.png",
   },
   {
     name: "Dairy",
     description:
       "Moisture-free packaging surfaces to prevent mold growth and extend shelf life on dairy products.",
-    image: "/Equipment/1942%202.webp",
+    image: "/industry/hygiene/1942 13.png",
   },
   {
     name: "Pharmaceuticals",
     description:
       "Ambient temperature drying for vials, ampoules, and trays without heat damage to sensitive products.",
-    image: "/Equipment/1942%203.webp",
-  },
-  {
-    name: "Biotechnology",
-    description:
-      "Contamination-free drying with filtered air streams for biotech lab equipment and packaging.",
-    image: "/Equipment/1942%204.webp",
+    image: "/industry/hygiene/1942 15.png",
   },
   {
     name: "Cosmetics",
     description:
       "Streak-free drying for cosmetic bottles and containers to ensure label adhesion and print quality.",
-    image: "/Equipment/1942%205.webp",
+    image: "/industry/hygiene/1942 17.png",
   },
   {
     name: "Electronics",
     description:
       "Precision moisture removal from PCBs, components, and enclosures without static or heat risk.",
-    image: "/Equipment/1942%206.webp",
-  },
-  {
-    name: "Clean Manufacturing",
-    description:
-      "Oil-free, particle-free air knife drying for cleanroom and controlled-environment production.",
-    image: "/dairy.webp",
-  },
-  {
-    name: "Export Facilities",
-    description:
-      "Ensure export packaging compliance with verified moisture-free surfaces and documented drying cycles.",
-    image: "/bakery.webp",
+    image: "/industry/hygiene/1942 12.png",
   },
 ];
 
@@ -396,9 +396,9 @@ export default function AirKnifeDryingPage() {
       <Hero
         title="Remove Surface Moisture 60% Faster at 1/4th Energy Costs"
         description="Industrial Air Knife Drying Systems trusted by beverage, pharmaceutical, food, and engineering industries to eliminate surface moisture without heat damage or contamination."
-        ctaText="Get Your Free ROI Assessment"
+        ctaText="Eliminate Moisture Now"
         ctaHref="contact"
-        backgroundVideo="/video/hero-compressed.mp4"
+        backgroundVideo="/video/air-knife-compressed.mp4"
         backgroundImage="/temp/hero.webp"
       />
 

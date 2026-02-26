@@ -370,7 +370,7 @@ export default function CrateWashingPage() {
       <Hero
         title="Clean 1200-1800 Crates/Hour While Cutting Water Usage by 40%"
         description="Crate Washing Systems trusted by beverage, dairy, food processing, and logistics operations to sanitize reusable crates, bins, and trays with precision and speed."
-        ctaText="Get Your Free ROI Assessment"
+        ctaText="Get Cleaner Crates Today"
         ctaHref="contact"
         backgroundVideo="/video/hero-compressed.mp4"
         backgroundImage="/temp/hero.webp"

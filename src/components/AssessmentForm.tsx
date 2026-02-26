@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useEffect, useState, FormEvent } from "react";
 import Link from "next/link";
 import type { FormConfig, FormField } from "@/config/forms";
+import { APPS_SCRIPT_URL } from "@/config/forms";
 
 interface Step1Data {
   fullName: string;
@@ -12,63 +12,92 @@ interface Step1Data {
   email: string;
   phone: string;
   city: string;
+  leadId: string;
+  formSlug: string;
 }
 
 function FieldRenderer({
   field,
-  register,
-  otherValues,
-  setOtherValue,
+  value,
+  onChange,
+  otherText,
+  onOtherTextChange,
+  hasError,
 }: {
   field: FormField;
-  register: ReturnType<typeof useForm>["register"];
-  otherValues: Record<string, string>;
-  setOtherValue: (name: string, value: string) => void;
+  value: string | string[];
+  onChange: (val: string | string[]) => void;
+  otherText: string;
+  onOtherTextChange: (val: string) => void;
+  hasError: boolean;
 }) {
   const isCheckbox = field.type === "checkbox";
   const isRadio = field.type === "radio";
 
   if (!isCheckbox && !isRadio) return null;
 
+  const allOptions = [
+    ...(field.options || []),
+    ...(field.hasOther ? ["Other"] : []),
+  ];
+
+  const handleChange = (opt: string, checked: boolean) => {
+    if (isRadio) {
+      onChange(opt);
+    } else {
+      const current = Array.isArray(value) ? value : [];
+      if (checked) {
+        onChange([...current, opt]);
+      } else {
+        onChange(current.filter((v) => v !== opt));
+      }
+    }
+  };
+
   return (
     <div className="mb-6">
-      <p className="font-sans font-semibold text-[15px] text-[#364761] mb-3">
-        {field.label}
+      <p
+        className={`font-sans font-semibold text-[15px] mb-3 ${hasError ? "text-red-500" : "text-[#364761]"}`}
+      >
+        {field.label} <span className="text-red-400">*</span>
       </p>
       <div className="flex flex-wrap gap-x-6 gap-y-3">
-        {field.options?.map((opt) => (
-          <label key={opt} className="flex items-center gap-2 cursor-pointer">
-            <input
-              type={isCheckbox ? "checkbox" : "radio"}
-              value={opt}
-              {...register(field.name)}
-              className="w-4 h-4 border-[#D5D5D5] text-[#0E4D85] accent-[#0E4D85]"
-            />
-            <span className="font-sans font-normal text-[14px] text-[#4D4D4D]">
-              {opt}
-            </span>
-          </label>
-        ))}
-        {field.hasOther && (
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type={isCheckbox ? "checkbox" : "radio"}
-              value="Other"
-              {...register(field.name)}
-              className="w-4 h-4 border-[#D5D5D5] text-[#0E4D85] accent-[#0E4D85]"
-            />
-            <span className="font-sans font-normal text-[14px] text-[#4D4D4D]">
-              Other
-            </span>
-          </label>
-        )}
+        {allOptions.map((opt) => {
+          const isChecked = isRadio
+            ? value === opt
+            : Array.isArray(value) && value.includes(opt);
+
+          return (
+            <label
+              key={opt}
+              className="flex items-center gap-2 cursor-pointer"
+            >
+              <input
+                type={isCheckbox ? "checkbox" : "radio"}
+                name={field.name}
+                value={opt}
+                checked={isChecked}
+                onChange={(e) => handleChange(opt, e.target.checked)}
+                className="w-4 h-4 border-[#D5D5D5] text-[#0E4D85] accent-[#0E4D85]"
+              />
+              <span className="font-sans font-normal text-[14px] text-[#4D4D4D]">
+                {opt}
+              </span>
+            </label>
+          );
+        })}
       </div>
+      {hasError && (
+        <p className="mt-2 font-sans text-[13px] text-red-500">
+          Please select an option
+        </p>
+      )}
       {field.hasOther && (
         <input
           type="text"
           placeholder="Please specify..."
-          value={otherValues[field.name] || ""}
-          onChange={(e) => setOtherValue(field.name, e.target.value)}
+          value={otherText}
+          onChange={(e) => onOtherTextChange(e.target.value)}
           className="mt-3 w-full max-w-xs border border-[#D5D5D5] rounded-lg px-4 py-2 font-sans text-[14px] text-[#364761] placeholder:text-[#B0B0B0] outline-none focus:border-[#2B74B8] transition-colors"
         />
       )}
@@ -81,39 +110,113 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [otherValues, setOtherValues] = useState<Record<string, string>>({});
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  const [fieldValues, setFieldValues] = useState<
+    Record<string, string | string[]>
+  >({});
+  const [fieldErrors, setFieldErrors] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const stored = localStorage.getItem("contactStep1");
     if (!stored) return;
     const data: Step1Data = JSON.parse(stored);
     setStep1(data);
-    reset({
-      fullName: data.fullName,
-      companyName: data.companyName,
-      role: data.role,
-      email: data.email,
-      phone: data.phone,
-      city: data.city,
-    });
-  }, [reset]);
+  }, []);
 
-  const handleOtherValue = (name: string, value: string) => {
+  const updateField = (name: string, value: string | string[]) => {
+    setFieldValues((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user selects something
+    setFieldErrors((prev) => ({ ...prev, [name]: false }));
+  };
+
+  const updateOtherText = (name: string, value: string) => {
     setOtherValues((prev) => ({ ...prev, [name]: value }));
   };
 
-  const onSubmit = async (data: Record<string, unknown>) => {
+  const getAllFields = (): FormField[] => {
+    return config.sections.flatMap((s) => s.fields);
+  };
+
+  const validate = (): boolean => {
+    const allFields = getAllFields();
+    const newErrors: Record<string, boolean> = {};
+    let valid = true;
+
+    for (const field of allFields) {
+      const val = fieldValues[field.name];
+      if (field.type === "radio") {
+        if (!val || val === "") {
+          newErrors[field.name] = true;
+          valid = false;
+        }
+      } else if (field.type === "checkbox") {
+        if (!val || !Array.isArray(val) || val.length === 0) {
+          newErrors[field.name] = true;
+          valid = false;
+        }
+      }
+    }
+
+    setFieldErrors(newErrors);
+    return valid;
+  };
+
+  const onSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    if (!validate()) {
+      // Scroll to first error
+      const firstErrorKey = Object.keys(fieldErrors).find(
+        (k) => fieldErrors[k]
+      );
+      if (firstErrorKey) {
+        const el = document.querySelector(`[name="${firstErrorKey}"]`);
+        el?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      return;
+    }
+
     setLoading(true);
+
+    // Build assessment fields
+    const fields: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(fieldValues)) {
+      fields[key] = value;
+    }
     // Merge "Other" free-text values
-    const finalData = { ...data, otherValues, formType: config.slug };
-    console.log("Assessment submission:", finalData);
-    await new Promise((r) => setTimeout(r, 1200));
+    for (const [key, value] of Object.entries(otherValues)) {
+      if (value) fields[`${key}_other`] = value;
+    }
+
+    const payload = {
+      step: 2,
+      leadId: step1!.leadId,
+      formSlug: step1!.formSlug,
+      fields,
+    };
+
+    if (APPS_SCRIPT_URL) {
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(payload),
+        });
+      } catch (err) {
+        console.error("Sheet sync failed:", err);
+      }
+    }
+
+    // Analytics tracking
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "NexGen_Lead_Submitted",
+      formSlug: step1!.formSlug,
+      leadId: step1!.leadId,
+      step: 2,
+      ...fields,
+    });
+
     localStorage.removeItem("contactStep1");
     setLoading(false);
     setSubmitted(true);
@@ -123,7 +226,9 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
     return (
       <section className="py-16 bg-[#F4F4F4] min-h-screen flex items-center">
         <div className="pad max w-full text-center">
-          <p className="text-[#4D4D4D] text-[16px]">Loading your details...</p>
+          <p className="text-[#4D4D4D] text-[16px]">
+            Loading your details...
+          </p>
         </div>
       </section>
     );
@@ -190,10 +295,19 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
               </ul>
             </div>
             <Link
-              href="/"
+              href={
+                {
+                  homepage: "/",
+                  hygiene: "/hygiene-station",
+                  "air-knife": "/air-knife-drying",
+                  "crate-washing": "/crate-washing",
+                }[step1.formSlug] || "/"
+              }
               className="inline-flex items-center justify-center px-8 py-3 bg-[#0E4D85] text-white font-sans font-semibold text-[16px] rounded-lg hover:bg-[#0b3d6a] transition-colors"
             >
-              Back to Home
+              {step1.formSlug === "homepage"
+                ? "Back to Home"
+                : "Back to Page"}
             </Link>
           </div>
         </div>
@@ -222,8 +336,8 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
 
           {/* Right — Form */}
           <div className="bg-white rounded-2xl p-6 md:p-8">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-              {/* Contact Details (pre-filled) */}
+            <form onSubmit={onSubmit} className="space-y-8">
+              {/* Contact Details (pre-filled, disabled) */}
               <div>
                 <h3 className="font-title font-semibold text-[18px] text-[#2B74B8] mb-5">
                   Your Details
@@ -235,8 +349,9 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
                         Full name
                       </label>
                       <input
-                        {...register("fullName", { required: true })}
-                        className={`w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] placeholder:text-[#B0B0B0] outline-none transition-colors ${errors.fullName ? "border-red-400" : "border-[#D5D5D5] focus:border-[#2B74B8]"}`}
+                        value={step1.fullName}
+                        disabled
+                        className="w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] bg-[#F4F4F4] border-[#D5D5D5] outline-none cursor-not-allowed"
                       />
                     </div>
                     <div>
@@ -244,8 +359,9 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
                         Company name
                       </label>
                       <input
-                        {...register("companyName", { required: true })}
-                        className={`w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] placeholder:text-[#B0B0B0] outline-none transition-colors ${errors.companyName ? "border-red-400" : "border-[#D5D5D5] focus:border-[#2B74B8]"}`}
+                        value={step1.companyName}
+                        disabled
+                        className="w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] bg-[#F4F4F4] border-[#D5D5D5] outline-none cursor-not-allowed"
                       />
                     </div>
                   </div>
@@ -255,8 +371,9 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
                         Your Role
                       </label>
                       <select
-                        {...register("role", { required: true })}
-                        className={`${selectClasses} ${errors.role ? "border-red-400" : "border-[#D5D5D5] focus:border-[#2B74B8]"}`}
+                        value={step1.role}
+                        disabled
+                        className={`${selectClasses} bg-[#F4F4F4] border-[#D5D5D5] cursor-not-allowed`}
                       >
                         {config.roles.map((r) => (
                           <option key={r} value={r}>
@@ -271,8 +388,9 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
                       </label>
                       <input
                         type="email"
-                        {...register("email", { required: true })}
-                        className={`w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] placeholder:text-[#B0B0B0] outline-none transition-colors ${errors.email ? "border-red-400" : "border-[#D5D5D5] focus:border-[#2B74B8]"}`}
+                        value={step1.email}
+                        disabled
+                        className="w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] bg-[#F4F4F4] border-[#D5D5D5] outline-none cursor-not-allowed"
                       />
                     </div>
                   </div>
@@ -283,8 +401,9 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
                       </label>
                       <input
                         type="tel"
-                        {...register("phone", { required: true })}
-                        className={`w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] placeholder:text-[#B0B0B0] outline-none transition-colors ${errors.phone ? "border-red-400" : "border-[#D5D5D5] focus:border-[#2B74B8]"}`}
+                        value={step1.phone}
+                        disabled
+                        className="w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] bg-[#F4F4F4] border-[#D5D5D5] outline-none cursor-not-allowed"
                       />
                     </div>
                     <div>
@@ -292,8 +411,9 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
                         City
                       </label>
                       <input
-                        {...register("city", { required: true })}
-                        className={`w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] placeholder:text-[#B0B0B0] outline-none transition-colors ${errors.city ? "border-red-400" : "border-[#D5D5D5] focus:border-[#2B74B8]"}`}
+                        value={step1.city}
+                        disabled
+                        className="w-full border rounded-lg px-4 py-3 font-sans text-[16px] text-[#364761] bg-[#F4F4F4] border-[#D5D5D5] outline-none cursor-not-allowed"
                       />
                     </div>
                   </div>
@@ -310,9 +430,13 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
                     <FieldRenderer
                       key={field.name}
                       field={field}
-                      register={register}
-                      otherValues={otherValues}
-                      setOtherValue={handleOtherValue}
+                      value={fieldValues[field.name] || (field.type === "checkbox" ? [] : "")}
+                      onChange={(val) => updateField(field.name, val)}
+                      otherText={otherValues[field.name] || ""}
+                      onOtherTextChange={(val) =>
+                        updateOtherText(field.name, val)
+                      }
+                      hasError={!!fieldErrors[field.name]}
                     />
                   ))}
                 </div>

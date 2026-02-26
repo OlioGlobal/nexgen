@@ -18,22 +18,6 @@ const homepage: FormConfig = {
       title: "Your Processing Details",
       fields: [
         {
-          name: "processing",
-          label: "What do you currently process?",
-          type: "checkbox",
-          options: [
-            "Vegetables (carrots, potatoes, onions, etc.)",
-            "Fruits",
-            "Ready-to-Eat Meals",
-            "Bakery / Chapati / Dough Products",
-            "Dairy Products",
-            "Meat / Poultry",
-            "Frozen Foods for Export",
-            "Spices & Condiments",
-          ],
-          hasOther: true,
-        },
-        {
           name: "volume",
           label: "What is your daily processing volume?",
           type: "radio",
@@ -55,28 +39,7 @@ const homepage: FormConfig = {
             "Too slow / Can't meet demand",
             "High labor costs",
             "Failed audits / Compliance issues",
-            "High energy / water costs",
             "Frequent equipment breakdowns",
-          ],
-        },
-      ],
-    },
-    {
-      title: "Solutions & Timeline",
-      fields: [
-        {
-          name: "solutions",
-          label: "Which solutions are you interested in?",
-          type: "checkbox",
-          options: [
-            "Vegetable / Fruit Processing Line",
-            "Industrial Washing Systems",
-            "Air Knife Drying Systems",
-            "Crate / Bin Washing Machines",
-            "Hygiene & Boot Wash Stations",
-            "Custom Automation Solutions",
-            "Complete Turnkey Processing Lines",
-            "Not sure – need consultation",
           ],
         },
         {
@@ -88,18 +51,6 @@ const homepage: FormConfig = {
             "Short-term (1–3 months)",
             "Planning phase (3–6 months)",
             "Just exploring options",
-          ],
-        },
-        {
-          name: "nextStep",
-          label: "What would be the ideal next step for you?",
-          type: "radio",
-          options: [
-            "Get a detailed quotation",
-            "Schedule a factory visit / demo",
-            "Talk to a solutions expert",
-            "Receive a product catalog",
-            "Get ROI projections for my setup",
           ],
         },
       ],

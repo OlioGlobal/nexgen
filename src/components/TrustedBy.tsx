@@ -29,10 +29,10 @@ export default function TrustedBy({
       <div className="pad max">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-heading text-[#364761] whitespace-pre-line">
+          <h2 className="text-heading max-w-2xl mx-auto text-[#364761] whitespace-pre-line">
             {title}
           </h2>
-          <p className="text-body text-[#4D4D4D] mt-4 max-w-[480px] mx-auto">
+          <p className="text-body max-w-xl mx-auto text-[#4D4D4D] mt-4 max-w-[480px] mx-auto">
             {description}
           </p>
         </div>
