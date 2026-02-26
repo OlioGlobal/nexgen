@@ -523,6 +523,15 @@ export default function CrateWashingPage() {
         title="Get Efficient Crate Cleaning: Hygiene & Fast"
         description="Request a personalized hygiene assessment and see exactly how much you could save in labor, water, and crate inventory costs."
         steps={contactSteps}
+        formSlug="crate-washing"
+        roles={[
+          "Owner / Director",
+          "Plant Head",
+          "Operations Manager",
+          "QA Manager",
+          "Logistics Manager",
+          "Other",
+        ]}
       />
     </>
   );

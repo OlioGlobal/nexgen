@@ -17,6 +17,8 @@ export interface ContactFormProps {
   title?: string;
   description?: string;
   steps?: string[];
+  formSlug?: string;
+  roles?: string[];
 }
 
 function CheckCircle() {
@@ -42,7 +44,7 @@ const defaultSteps = [
   "Get detailed ROI projections based on your actual volumes",
 ];
 
-const roles = [
+const defaultRoles = [
   "Director",
   "Operations Head",
   "Production Manager",
@@ -56,6 +58,8 @@ export default function ContactForm({
   title = "Join 500+ Smart Food Processors Who\u2019ve Already Made The Switch",
   description = "Get your personalized ROI assessment and see exactly how much you could save.",
   steps = defaultSteps,
+  formSlug = "homepage",
+  roles = defaultRoles,
 }: ContactFormProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -71,7 +75,7 @@ export default function ContactForm({
     localStorage.setItem("contactStep1", JSON.stringify(data));
     // Simulate a short delay for UX
     await new Promise((r) => setTimeout(r, 800));
-    router.push("/assessment");
+    router.push(`/assessment/${formSlug}`);
   };
 
   return (

@@ -534,7 +534,17 @@ export default function Home() {
         description="Nexgen machines operate in high-volume, real-world food processing environments where consistency, speed, and reliability matter more than theoretical capacity. The following examples reflect how automation delivers measurable outcomes across different use cases."
         cases={caseStudiesData}
       />
-      <ContactForm />
+      <ContactForm
+        formSlug="homepage"
+        roles={[
+          "Owner / Director",
+          "Plant Head",
+          "Production Manager",
+          "Procurement Head",
+          "Operations Manager",
+          "Other",
+        ]}
+      />
     </>
   );
 }

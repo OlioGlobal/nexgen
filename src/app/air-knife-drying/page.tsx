@@ -485,6 +485,15 @@ export default function AirKnifeDryingPage() {
         title="Eliminate Moisture Risk from Your Production Line"
         description="Get a FREE Air Knife System Assessment and see how much drying time, energy, and rejection cost you can eliminate."
         steps={contactSteps}
+        formSlug="air-knife"
+        roles={[
+          "Owner / Director",
+          "Plant Head",
+          "Production Manager",
+          "Engineering Manager",
+          "Operations Manager",
+          "Other",
+        ]}
       />
     </>
   );

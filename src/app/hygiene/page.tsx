@@ -524,6 +524,16 @@ export default function HygienePage() {
           "Schedule a demo at our facility or yours",
           "Get detailed compliance projections based on the footfalls and vulnerabilities of your facility",
         ]}
+        formSlug="hygiene"
+        roles={[
+          "QA / QC Manager",
+          "Compliance Officer",
+          "Plant Head",
+          "Production Manager",
+          "Facility Manager",
+          "Owner / Director",
+          "Other",
+        ]}
       />
     </>
   );
