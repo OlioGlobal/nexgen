@@ -336,19 +336,19 @@ const featuresData: Feature[] = [
 /* ─── Why Choose NexGen ─── */
 const whyChooseCards: WhyChooseCard[] = [
   {
-    icon: "/icon/icon-expertise.webp",
+    icon: "/casestudy/hygiene/benfits/Group.png",
     title: "20+ Years in Hygiene & Industrial Engineering",
   },
   {
-    icon: "/icon/icon-support.webp",
+    icon: "/casestudy/hygiene/benfits/Group-1.png",
     title: "Industry-Agnostic Compliance Expertise",
   },
   {
-    icon: "/icon/icon-track-record-1.webp",
+    icon: "/casestudy/hygiene/benfits/fi_841309.png",
     title: "Enforcement-Based Hygiene Design",
   },
   {
-    icon: "/icon/icon-innovation.webp",
+    icon: "/casestudy/hygiene/benfits/fi_2108189.png",
     title: "India-Manufactured, Globally Exported",
   },
 ];
@@ -394,7 +394,7 @@ const caseStudiesData: CaseStudy[] = [
       "Consistent GMP entry across shifts",
       "Reduced QA intervention",
     ],
-    image: "/dairy.webp",
+    image: "/casestudy/hygiene/gmp-facility.png",
   },
   {
     title: "Multi-Shift Manufacturing Plant",
@@ -407,7 +407,7 @@ const caseStudiesData: CaseStudy[] = [
       "Reduced supervisory load",
       "Smooth entry flow during peak hours",
     ],
-    image: "/bakery.webp",
+    image: "/casestudy/hygiene/multi-shift-plant.png",
   },
   {
     title: "Export-Focused Facility",
@@ -420,7 +420,7 @@ const caseStudiesData: CaseStudy[] = [
       "Repeat export approvals",
       "Faster customer acceptance",
     ],
-    image: "/Restaurant.webp",
+    image: "/casestudy/hygiene/nexgen-different.png",
   },
 ];
 
@@ -466,7 +466,7 @@ export default function HygienePage() {
           "Footwear contamination spreading bacteria",
           "Expecting workers to remember 5–6 hygiene steps every time they enter is impractical",
         ]}
-        image="/util/food-processing.webp"
+        image="/casestudy/hygiene/audit-failures.png"
       />
 
       <ComparisonTable
@@ -476,7 +476,7 @@ export default function HygienePage() {
 
       <WhyDifferent
         title="What Makes Nexgen Hygiene Systems Different"
-        image="/util/faq-home.webp"
+        image="/casestudy/hygiene/nexgen-different.png"
         faqs={whyDifferentFaqs}
       />
 

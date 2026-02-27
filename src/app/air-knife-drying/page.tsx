@@ -282,23 +282,23 @@ const featuresData = [
 
 const whyChooseCards = [
   {
-    icon: "/icon/icon-expertise.webp",
+    icon: "/casestudy/airknife/benfits/Group.png",
     title: "20+ Years of Industrial Drying Expertise",
   },
   {
-    icon: "/icon/icon-innovation.webp",
+    icon: "/casestudy/hygiene/benfits/fi_2108189.png",
     title: "Multi-Industry Experience (Beverage, Pharma, Food, Automotive)",
   },
   {
-    icon: "/icon/icon-track-record.webp",
+    icon: "/casestudy/hygiene/benfits/Group-1.png",
     title: "Proven Energy Savings (50\u201370% vs Heat Drying)",
   },
   {
-    icon: "/icon/icon-support.webp",
+    icon: "/casestudy/hygiene/benfits/fi_686317.png",
     title: "Customization Capability for Unique Applications",
   },
   {
-    icon: "/icon/icon-track-record-1.webp",
+    icon: "/casestudy/hygiene/benfits/fi_841309.png",
     title: "Nationwide Installation & Service Support",
   },
 ];
@@ -343,7 +343,7 @@ const caseStudiesData = [
       "Zero heat damage to labels or bottles",
       "Annual savings: Lakhs in electricity costs (based on averages)",
     ],
-    image: "/dairy.webp",
+    image: "/casestudy/airknife/beverage-bottling.png",
   },
   {
     title: "Food Packaging Facility: 93% Reduction in Rejections",
@@ -358,7 +358,7 @@ const caseStudiesData = [
       "Processing speed: 120 pouches/minute",
       "\u20b918 lakhs annual savings from reduced waste",
     ],
-    image: "/bakery.webp",
+    image: "/casestudy/airknife/food-packaging.png",
   },
   {
     title: "Pharmaceutical Plant: Zero Product Damage",
@@ -373,7 +373,7 @@ const caseStudiesData = [
       "Consistent drying across all shifts",
       "Quality complaints eliminated",
     ],
-    image: "/kitchen.webp",
+    image: "/casestudy/airknife/beverage-bottling.png",
   },
 ];
 

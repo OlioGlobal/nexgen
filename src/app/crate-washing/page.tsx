@@ -53,43 +53,43 @@ const industries = [
     name: "Food Processing",
     description:
       "Sanitize crates used across production lines to meet FSSAI and export hygiene standards.",
-    image: "/Equipment/1942%201.webp",
+    image: "/industry/carat/Food Processing.png",
   },
   {
     name: "Agriculture",
     description:
       "Clean harvest crates and field bins to prevent soil and pesticide residue carry-over.",
-    image: "/Equipment/1942%202.webp",
+    image: "/industry/carat/agri operation.png",
   },
   {
     name: "Meat & Poultry",
     description:
       "Eliminate bacterial contamination from protein-handling crates with hot water sanitization.",
-    image: "/Equipment/1942%203.webp",
+    image: "/industry/carat/1942 18.png",
   },
   {
     name: "Dairy",
     description:
       "Achieve HACCP-grade sanitization for dairy crates with controlled-temperature washing cycles.",
-    image: "/Equipment/1942%204.webp",
+    image: "/industry/carat/image 113.png",
   },
   {
     name: "Distribution Centers",
     description:
       "High-speed crate washing for logistics hubs handling thousands of crates across multiple product categories daily.",
-    image: "/Equipment/1942%205.webp",
+    image: "/industry/carat/distrubution containers.png",
   },
   {
     name: "Cold Storage",
     description:
       "Remove condensation and microbial buildup from cold-chain crates before restacking and dispatch.",
-    image: "/Equipment/1942%206.webp",
+    image: "/industry/carat/cold storage.png",
   },
   {
     name: "Export Facilities",
     description:
       "Meet international hygiene certifications with documented, repeatable crate sanitization processes.",
-    image: "/dairy.webp",
+    image: "/industry/carat/image 112.png",
   },
 ];
 
