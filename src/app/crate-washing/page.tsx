@@ -253,24 +253,23 @@ const featuresData = [
 
 const whyChooseCards = [
   {
-    icon: "/icon/icon-expertise.webp",
+    icon: "/casestudy/carate/benifits/1.png",
     title: "20+ Years in Food Processing Hygiene Solutions",
   },
   {
-    icon: "/icon/icon-innovation.webp",
-    title:
-      "Multi-Industry Experience (Beverage, Dairy, Meat, Produce, Logistics)",
+    icon: "/casestudy/carate/benifits/2.png",
+    title: "Multi-Industry Experience (Beverage, Dairy, Meat ...)",
   },
   {
-    icon: "/icon/icon-track-record.webp",
+    icon: "/casestudy/carate/benifits/3.png",
     title: "Proven Water & Labor Savings (60\u201375% Reduction)",
   },
   {
-    icon: "/icon/icon-support.webp",
+    icon: "/casestudy/carate/benifits/4.png",
     title: "Food-Grade Construction & Compliance Support",
   },
   {
-    icon: "/icon/icon-track-record-1.webp",
+    icon: "/casestudy/carate/benifits/5.png",
     title: "Nationwide Installation & Service",
   },
 ];
@@ -317,7 +316,7 @@ const caseStudiesData = [
       "Annual savings: \u20b932 lakhs (labor + water costs)",
       "ROI achieved in 16 months",
     ],
-    image: "/dairy.webp",
+    image: "/casestudy/carate/casestudy-3.png",
   },
   {
     title: "Dairy Processing: HACCP Certification Achieved",
@@ -332,7 +331,7 @@ const caseStudiesData = [
       "Zero contamination incidents in 24 months",
       "\u20b925 lakhs capital freed from lower crate inventory",
     ],
-    image: "/bakery.webp",
+    image: "/casestudy/carate/casestudy-1.png",
   },
   {
     title: "Food Logistics: Zero Cross-Contamination",
@@ -347,7 +346,7 @@ const caseStudiesData = [
       "Customer quality approvals improved across all categories",
       "Eliminated customer complaints related to crate hygiene",
     ],
-    image: "/kitchen.webp",
+    image: "/casestudy/carate/casestudy-2.png",
   },
 ];
 
@@ -476,7 +475,7 @@ export default function CrateWashingPage() {
           "Inconsistent cleaning increases audit observations",
           "Wet crates reduce stacking stability",
         ]}
-        image="/Equipment/1942%201.webp"
+        image="/util/crate-pain-points.png"
       />
 
       {/* Comparison Table */}
@@ -488,7 +487,7 @@ export default function CrateWashingPage() {
       {/* Multi-Stage Washing Details (WhyDifferent accordion) */}
       <WhyDifferent
         title="Complete Multi-Stage Washing for Food-Grade Sanitization"
-        image="/Equipment/1942%202.webp"
+        image="/util/crate-multi-stage.png"
         faqs={washingFaqs}
       />
 

@@ -180,8 +180,7 @@ const comparisonRows = [
       "Incomplete drying leads to labeling failures and quality defects",
     nexgenIcon: "/icon/green-4.webp",
     nexgenTitle: "99%+ Surface Moisture Elimination",
-    nexgenDesc:
-      "Precision air curtain achieves near-complete moisture removal",
+    nexgenDesc: "Precision air curtain achieves near-complete moisture removal",
   },
   {
     ordinaryIcon: "/icon/red-5.webp",
@@ -450,7 +449,7 @@ export default function AirKnifeDryingPage() {
       {/* What Makes NexGen Different (accordion) */}
       <WhyDifferent
         title="What Makes NexGen Air Knife Drying Systems Different?"
-        image="/Equipment/1942%205.webp"
+        image="/util/slow-drying-1.png"
         faqs={whyDifferentFaqs}
       />
 
