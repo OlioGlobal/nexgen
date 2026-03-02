@@ -448,6 +448,7 @@ export default function HygienePage() {
         categories={hygieneCategories}
         products={hygieneProducts}
         ctaText="Download Brochure"
+        brochureName="Hygiene Station Brochure"
       />
 
       <IndustryCarousel

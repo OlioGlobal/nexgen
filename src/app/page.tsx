@@ -483,6 +483,7 @@ export default function Home() {
         categories={productCategories}
         products={products}
         ctaText="Download Brochure"
+        brochureName="Food Processing Brochure"
       />
       <IndustryCarousel
         title="Custom Food Processing Equipment"

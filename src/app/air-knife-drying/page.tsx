@@ -415,6 +415,7 @@ export default function AirKnifeDryingPage() {
         categories={productCategories}
         products={products}
         ctaText="Download Brochure"
+        brochureName="Air Knife Drying Brochure"
       />
 
       {/* Industry Carousel */}

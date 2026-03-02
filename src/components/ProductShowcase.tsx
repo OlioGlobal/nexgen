@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import BrochureModal from "@/components/BrochureModal";
 
 export interface Product {
   name: string;
@@ -21,6 +21,7 @@ export interface ProductShowcaseProps {
   categories: CategoryConfig[];
   products: Product[];
   ctaText: string;
+  brochureName?: string;
 }
 
 function ProductCard({ product }: { product: Product }) {
@@ -64,8 +65,10 @@ export default function ProductShowcase({
   categories,
   products,
   ctaText,
+  brochureName,
 }: ProductShowcaseProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
+  const [modalOpen, setModalOpen] = useState(false);
   const filtered = products.filter((p) => p.category === activeCategory.label);
 
   return (
@@ -107,16 +110,21 @@ export default function ProductShowcase({
 
         {/* CTA Button */}
         <div className="mt-12 text-center">
-          <Link
-            href={activeCategory.brochureHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0E4D85] text-white text-body-sm font-semibold rounded-lg border border-[#0E4D85] hover:bg-transparent hover:text-[#0E4D85] transition-colors"
+          <button
+            onClick={() => setModalOpen(true)}
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0E4D85] text-white text-body-sm font-semibold rounded-lg border border-[#0E4D85] hover:bg-transparent hover:text-[#0E4D85] transition-colors cursor-pointer"
           >
             {ctaText}
-          </Link>
+          </button>
         </div>
       </div>
+
+      <BrochureModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        brochureHref={activeCategory.brochureHref}
+        brochureName={brochureName}
+      />
     </section>
   );
 }

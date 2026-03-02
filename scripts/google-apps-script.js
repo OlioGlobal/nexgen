@@ -30,10 +30,47 @@ const STEP1_HEADERS = [
   "Page URL",
 ];
 
+const BROCHURE_HEADERS = [
+  "Date",
+  "Time",
+  "Brochure Name",
+  "Full Name",
+  "Email",
+  "Phone",
+  "City",
+  "Page URL",
+];
+
 function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents);
     var ss = SpreadsheetApp.getActiveSpreadsheet();
+
+    // Handle brochure leads separately
+    if (data.step === "brochure") {
+      var brochureSheet = ss.getSheetByName("Brochure Downloads");
+      if (!brochureSheet) {
+        brochureSheet = ss.insertSheet("Brochure Downloads");
+      }
+      if (brochureSheet.getLastRow() === 0) {
+        brochureSheet.appendRow(BROCHURE_HEADERS);
+      }
+      var now = new Date();
+      brochureSheet.appendRow([
+        Utilities.formatDate(now, Session.getScriptTimeZone(), "dd/MM/yyyy"),
+        Utilities.formatDate(now, Session.getScriptTimeZone(), "hh:mm:ss a"),
+        data.brochureName || "",
+        data.fullName || "",
+        data.email || "",
+        data.phone || "",
+        data.city || "",
+        data.pageUrl || "",
+      ]);
+      return ContentService.createTextOutput(
+        JSON.stringify({ status: "ok", step: "brochure" })
+      ).setMimeType(ContentService.MimeType.JSON);
+    }
+
     var tabName = TAB_MAP[data.formSlug] || "Food Processing";
     var sheet = ss.getSheetByName(tabName);
 
