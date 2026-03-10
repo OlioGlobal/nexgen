@@ -1,4 +1,6 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
 import PainPoints from "@/components/PainPoints";
@@ -10,13 +12,8 @@ import Testimonials from "@/components/Testimonials";
 import CaseStudies from "@/components/CaseStudies";
 import IndustryCarousel from "@/components/IndustryCarousel";
 import ContactForm from "@/components/ContactForm";
+import BrochureModal from "@/components/BrochureModal";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-  title: "NexGen Crate Washing Machines | Industrial Crate Washers",
-  description:
-    "Clean 1200-1800 Crates/Hour While Cutting Water Usage by 40%. Crate Washing Systems trusted by beverage, dairy, food processing, and logistics operations.",
-};
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -363,6 +360,8 @@ const contactSteps = [
 /* ------------------------------------------------------------------ */
 
 export default function CrateWashingPage() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <>
       {/* Hero */}
@@ -447,13 +446,20 @@ export default function CrateWashingPage() {
 
           {/* Download Brochure */}
           <div className="text-center mt-8">
-            <a
-              href="#contact"
-              className="inline-block bg-[#0E4D85] text-white font-sans font-semibold text-[16px] px-8 py-3 rounded-full hover:bg-[#0b3d6a] transition-colors"
+            <button
+              onClick={() => setModalOpen(true)}
+              className="inline-block bg-[#0E4D85] text-white font-sans font-semibold text-[16px] px-8 py-3 rounded-full hover:bg-[#0b3d6a] transition-colors cursor-pointer"
             >
               Download Brochure
-            </a>
+            </button>
           </div>
+
+          <BrochureModal
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            brochureHref="/assets/brochures/nexgen-food-processing-brochure.pdf"
+            brochureName="Crate Washing Brochure"
+          />
         </div>
       </section>
 

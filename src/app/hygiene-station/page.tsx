@@ -394,7 +394,7 @@ const caseStudiesData: CaseStudy[] = [
       "Consistent GMP entry across shifts",
       "Reduced QA intervention",
     ],
-    image: "/casestudy/hygiene/gmp-facility.png",
+    image: "/casestudy/hygiene/gmp-manufacturing-facility.png",
   },
   {
     title: "Multi-Shift Manufacturing Plant",
@@ -407,7 +407,7 @@ const caseStudiesData: CaseStudy[] = [
       "Reduced supervisory load",
       "Smooth entry flow during peak hours",
     ],
-    image: "/casestudy/hygiene/multi-shift-plant.png",
+    image: "/casestudy/hygiene/multi-shift manufacturing-plant.png",
   },
   {
     title: "Export-Focused Facility",
@@ -420,7 +420,7 @@ const caseStudiesData: CaseStudy[] = [
       "Repeat export approvals",
       "Faster customer acceptance",
     ],
-    image: "/casestudy/hygiene/nexgen-different.png",
+    image: "/casestudy/hygiene/export-focused-facility.png",
   },
 ];
 

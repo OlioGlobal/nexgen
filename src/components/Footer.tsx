@@ -70,7 +70,7 @@ export default function Footer() {
                   />
                 </svg>
                 <span className="font-sans text-[16px]">
-                  marketing@nexgenhygiene.com
+                  info@nexgenhygiene.com
                 </span>
               </a>
             </div>

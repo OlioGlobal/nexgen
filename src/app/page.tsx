@@ -401,7 +401,7 @@ const caseStudiesData: CaseStudy[] = [
       "Reduced dependency on manual labor",
       "Better control over daily production schedules",
     ],
-    image: "/casestudy/homepage/image 105.png",
+    image: "/casestudy/homepage/akshayapatra-foundation.png",
   },
   {
     title: "Multi-Location Food Processor",
