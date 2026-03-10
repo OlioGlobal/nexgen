@@ -362,7 +362,7 @@ const testimonialsData: Testimonial[] = [
       "We were facing repeated entry-related observations during internal audits. Training and SOPs weren't the issue, but consistency was. After installing NexGen's turnstile-based hygiene system, entry compliance became automatic. Operators follow the same sequence every time, without supervision. Since deployment, we haven't had a single hygiene deviation linked to entry.",
     personName: "Quality & Compliance Head",
     personRole: "GMP Manufacturing Facility, Hyderabad",
-    personImage: "/icon/operation-head.webp",
+    personImage: "/icon/operation-head.png",
   },
   {
     category: "Export-Oriented Manufacturing Plant",
@@ -370,7 +370,7 @@ const testimonialsData: Testimonial[] = [
       "Auditors used to focus heavily on personnel hygiene because enforcement depended on people. NexGen helped us redesign our entry points with integrated handwash, sole cleaning, and access control. The system now enforces hygiene before entry, not after inspection. Our last two export audits were smoother, with zero questions on entry hygiene.",
     personName: "Plant Head",
     personRole: "Export Manufacturing Facility, Gujarat",
-    personImage: "/icon/production-manager.webp",
+    personImage: "/icon/production-manager.png",
   },
   {
     category: "High-Volume Multi-Shift Facility",
@@ -378,7 +378,7 @@ const testimonialsData: Testimonial[] = [
       "Shift change was always our weak point. Supervisors can't watch every entry when 100+ people move at once. With NexGen's hygiene stations in place, the process controls itself. Even during peak hours, hygiene compliance stays consistent. We've reduced supervisory intervention and improved overall discipline on the shop floor.",
     personName: "Operations Manager",
     personRole: "Multi-Shift Manufacturing Plant, Maharashtra",
-    personImage: "/icon/director.webp",
+    personImage: "/icon/director.png",
   },
 ];
 

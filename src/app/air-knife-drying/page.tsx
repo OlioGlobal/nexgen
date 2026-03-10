@@ -310,7 +310,7 @@ const testimonialsData = [
       "Our heat tunnel dryer was the slowest point in our bottling line and consumed massive energy. After installing NexGen\u2019s air knife drying system, we increased line speed by 50% while cutting drying energy costs by 60%. The bottles are completely dry with zero heat damage to labels. ROI was achieved in under 14 months.",
     personName: "Production Manager",
     personRole: "Large-Scale Beverage Bottling Facility, Maharashtra",
-    personImage: "/icon/operation-head.webp",
+    personImage: "/icon/operation-head.png",
   },
   {
     category: "Pharmaceutical Manufacturing Facility",
@@ -318,7 +318,7 @@ const testimonialsData = [
       "We were launching a temperature sensitive product line and our existing drying system would be proven to be damaging for its packaging. NexGen customized their ambient air knife system for us. We are now drying our vials, trays, and packaging without any heat exposure. It has improved drying consistency, and the energy consumption is also low.",
     personName: "Quality Assurance Manager",
     personRole: "Pharmaceutical Packaging Facility, Hyderabad",
-    personImage: "/icon/production-manager.webp",
+    personImage: "/icon/production-manager.png",
   },
   {
     category: "Food Packaging Manufacturer",
@@ -326,7 +326,7 @@ const testimonialsData = [
       "We were rejecting 12\u201315% of pouches due to surface moisture causing labeling failures and mold during storage. NexGen\u2019s pouch drying system removed 99% of moisture at speeds up to 120 pouches/minute. Our rejection rate dropped to under 2%, and we\u2019re processing more volume faster than ever.",
     personName: "Operations Head",
     personRole: "Ready-to-Eat Food Packaging Company, Gujarat",
-    personImage: "/icon/director.webp",
+    personImage: "/icon/director.png",
   },
 ];
 

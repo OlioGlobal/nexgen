@@ -279,7 +279,7 @@ const testimonialsData = [
       "We were washing 2,000 crates daily with 6 workers using hoses and brushes. It took all day, used massive amounts of water, and cleaning quality was inconsistent. NexGen\u2019s automated crate washer processes 400 crates/hour with one operator. We cut labor costs by 70%, reduced water consumption by 65%, and our crates are cleaner than ever. FSSAI audits are now smooth, no hygiene observations.",
     personName: "Operations Manager",
     personRole: "Large Beverage Distribution Facility, Maharashtra",
-    personImage: "/icon/operation-head.webp",
+    personImage: "/icon/operation-head.png",
   },
   {
     category: "Dairy Processing Plant",
@@ -287,7 +287,7 @@ const testimonialsData = [
       "Cross-contamination from poorly washed crates was our biggest audit risk. Manual washing couldn\u2019t achieve the bacterial removal we needed for dairy products. After installing NexGen\u2019s hot water crate washer (65\u00b0C), our swab tests show under 10 CFU consistently. We passed HACCP certification on the first attempt, and we\u2019ve reduced our crate inventory by 60% because turnaround is so fast.",
     personName: "QA Manager",
     personRole: "Dairy Processing Facility, Gujarat",
-    personImage: "/icon/production-manager.webp",
+    personImage: "/icon/production-manager.png",
   },
   {
     category: "Food Packaging & Logistics",
@@ -295,7 +295,7 @@ const testimonialsData = [
       "We handle crates for multiple product types, like vegetables, bakery, dairy, meat. Cross-contamination and allergen control were constant concerns. NexGen designed a multi-zone washing system with hot sanitization that eliminates bacterial transfer between product categories. Our customers specifically reference our crate hygiene in quality agreements now.",
     personName: "Facility Manager",
     personRole: "Multi-Product Food Logistics Company, Pune",
-    personImage: "/icon/director.webp",
+    personImage: "/icon/director.png",
   },
 ];
 
