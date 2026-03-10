@@ -13,6 +13,7 @@ import CaseStudies from "@/components/CaseStudies";
 import IndustryCarousel from "@/components/IndustryCarousel";
 import ContactForm from "@/components/ContactForm";
 import BrochureModal from "@/components/BrochureModal";
+import VideoShowcase from "@/components/VideoShowcase";
 import Image from "next/image";
 
 /* ------------------------------------------------------------------ */
@@ -467,6 +468,14 @@ export default function CrateWashingPage() {
       <IndustryCarousel
         title="Need Custom Configuration for Unique Crate Sizes, Specialized Cleaning, or Multi-Product Operations?"
         industries={industries}
+      />
+
+      {/* Video Showcase */}
+      <VideoShowcase
+        title="Wash Out All Possible Contaminations from Reusable Crates"
+        description="From Labor-Intensive Manual Washing to Automated Industrial Crate Washing Systems."
+        videoId="c1hS1sovu-E"
+        thumbnail="https://img.youtube.com/vi/c1hS1sovu-E/maxresdefault.jpg"
       />
 
       {/* Pain Points */}

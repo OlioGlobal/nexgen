@@ -368,7 +368,7 @@ const testimonialsData: Testimonial[] = [
       "We were struggling to meet demand with our manual dicing process. After installing NexGen's automated dicing line, we increased throughput by 65% while maintaining perfect cube consistency. The machine paid for itself in just 7 months through increased orders and reduced labor costs.",
     personName: "Operations Head",
     personRole: "Mid-Sized Food Packaging Company, Pune",
-    personImage: "/icon/operation-head.webp",
+    personImage: "/icon/operation-head.png",
   },
   {
     category: "Ready-to-Eat / Central Kitchen",
@@ -376,7 +376,7 @@ const testimonialsData: Testimonial[] = [
       "Quality consistency across our 12 outlets was our biggest challenge. NexGen's washing and cutting automation changed everything. Now every outlet gets the same perfect prep, our customers notice the improved quality, and our kitchen staff can focus on cooking instead of repetitive cutting.",
     personName: "Production Manager",
     personRole: "Multi-Location Ready-to-Eat Chain, Delhi NCR",
-    personImage: "/icon/production-manager.webp",
+    personImage: "/icon/production-manager.png",
   },
   {
     category: "Export-Focused Processor",
@@ -384,7 +384,7 @@ const testimonialsData: Testimonial[] = [
       "Meeting international food safety standards was non-negotiable for our export business. NexGen didn't just provide machines—they helped us design a complete hygienic processing line that passed the BRCGS audit on the first attempt. Their attention to compliance details gave us confidence to expand into EU markets.",
     personName: "Director",
     personRole: "Export-Oriented Food Processing Facility, Gujarat",
-    personImage: "/icon/director.webp",
+    personImage: "/icon/director.png",
   },
 ];
 

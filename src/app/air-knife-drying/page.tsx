@@ -10,6 +10,7 @@ import Features from "@/components/Features";
 import WhyChoose from "@/components/WhyChoose";
 import Testimonials from "@/components/Testimonials";
 import CaseStudies from "@/components/CaseStudies";
+import VideoShowcase from "@/components/VideoShowcase";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -422,6 +423,14 @@ export default function AirKnifeDryingPage() {
       <IndustryCarousel
         title="Need a Custom Air Knife Configuration for Automotive Parts, Electronic Components, or Specialty Manufacturing?"
         industries={industries}
+      />
+
+      {/* Video Showcase */}
+      <VideoShowcase
+        title="Eliminate Moisture from Production Line, Fast & Efficiently"
+        description="From Slow Energy-Intensive Drying Methods to High-Speed Air Knife Drying Systems."
+        videoId="zccqJFEsfs4"
+        thumbnail="https://img.youtube.com/vi/zccqJFEsfs4/maxresdefault.jpg"
       />
 
       {/* Pain Points */}

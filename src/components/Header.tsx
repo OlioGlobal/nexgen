@@ -20,7 +20,7 @@ export default function Header() {
     <header className="sticky top-0 left-0 w-full z-50 bg-white shadow-sm">
       <div className="pad max flex items-center justify-between h-[64px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center shrink-0">
+        <div className="flex items-center shrink-0">
           <Image
             src="/Nexgen.webp"
             alt="Nexgen Hygiene Systems"
@@ -29,7 +29,7 @@ export default function Header() {
             className="h-[40px] w-auto object-contain"
             priority
           />
-        </Link>
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">

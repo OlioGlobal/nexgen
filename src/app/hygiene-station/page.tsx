@@ -15,6 +15,7 @@ import Features, { type Feature } from "@/components/Features";
 import WhyChoose, { type WhyChooseCard } from "@/components/WhyChoose";
 import Testimonials, { type Testimonial } from "@/components/Testimonials";
 import CaseStudies, { type CaseStudy } from "@/components/CaseStudies";
+import VideoShowcase from "@/components/VideoShowcase";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -454,6 +455,13 @@ export default function HygienePage() {
       <IndustryCarousel
         title="Need a Custom Hygiene System Layout for Multiple Zones or Entry Points?"
         industries={industries}
+      />
+
+      <VideoShowcase
+        title="Stop Contamination Risks at the Entry Point"
+        description="From Inconsistent Manual Hygiene Practices to Automated Industrial Hygiene Systems."
+        videoId="nlwdVZ04neI"
+        thumbnail="https://img.youtube.com/vi/nlwdVZ04neI/maxresdefault.jpg"
       />
 
       <PainPoints
