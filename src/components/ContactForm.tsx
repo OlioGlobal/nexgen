@@ -115,6 +115,10 @@ export default function ContactForm({
       phone: data.phone,
       city: data.city,
       pageUrl,
+      user_data: {
+        email: data.email,
+        phone_number: data.phone,
+      },
     });
 
     router.push(`/assessment/${formSlug}`);

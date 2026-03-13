@@ -215,6 +215,10 @@ export default function AssessmentForm({ config }: { config: FormConfig }) {
       leadId: step1!.leadId,
       step: 2,
       ...fields,
+      user_data: {
+        email: step1!.email,
+        phone_number: step1!.phone,
+      },
     });
 
     localStorage.removeItem("contactStep1");

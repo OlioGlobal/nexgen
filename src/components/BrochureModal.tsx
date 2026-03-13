@@ -70,6 +70,10 @@ export default function BrochureModal({
       brochureName,
       ...form,
       pageUrl: window.location.href,
+      user_data: {
+        email: form.email,
+        phone_number: form.phone,
+      },
     });
 
     setLoading(false);
